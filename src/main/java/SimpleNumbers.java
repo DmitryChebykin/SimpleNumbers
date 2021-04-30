@@ -28,7 +28,7 @@ public class SimpleNumbers {
                 System.out.printf(output, i);
             }
         }
-        System.out.println();
+
         System.out.printf("Количество найденных простых чисел равно %d.%n", simpleNumbersQuantity);
     }
 
