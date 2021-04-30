@@ -19,7 +19,7 @@ public class SimpleNumbers {
         String output;
         int simpleNumbersQuantity = 0;
 
-        for (int i = 1; i <= examinedNumber; i++) {
+        for (int i = 1; i < examinedNumber; i++) {
 
             if (isNumberSimple(i)) {
                 ++simpleNumbersQuantity;
@@ -29,7 +29,7 @@ public class SimpleNumbers {
             }
         }
 
-        System.out.printf("Количество найденных простых чисел равно %d.%n", simpleNumbersQuantity);
+        System.out.printf("%nКоличество найденных простых чисел равно %d.%n", simpleNumbersQuantity);
     }
 
     private static boolean isNumberSimple(int examinedNumber) {
@@ -42,8 +42,8 @@ public class SimpleNumbers {
         }
 
 //skip the check for division by even numbers such as 4, 8, 10, ...
-        for (int previuosNumbersIterator = 3; previuosNumbersIterator < examinedNumber; previuosNumbersIterator += 2) {
-            if (examinedNumber % previuosNumbersIterator == 0) {
+        for (int previousNumbersIterator = 3; previousNumbersIterator < examinedNumber; previousNumbersIterator += 2) {
+            if (examinedNumber % previousNumbersIterator == 0) {
                 return false;
             }
         }
